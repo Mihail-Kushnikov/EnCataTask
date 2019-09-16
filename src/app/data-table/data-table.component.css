@@ -1,0 +1,19 @@
+th {
+    border: 1px solid grey;
+}
+td {
+    border: 1px solid grey;
+}
+table{
+    border: 1px solid grey;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+div{
+    width: 760px;
+    margin: 60px auto;
+}
+div>*{
+    padding-left: 10px;
+}

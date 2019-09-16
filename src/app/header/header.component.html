@@ -1,0 +1,17 @@
+<section>
+    <button mat-button [matMenuTriggerFor]="menu">Data Table</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/data" routerLinkActive="active">Data Table</button>
+    </mat-menu>
+    
+    <button mat-button [matMenuTriggerFor]="menu1">Task 7 9</button>
+    <mat-menu #menu1="matMenu">
+      <button mat-menu-item routerLink="/example" routerLinkActive="active">Example 7</button>
+      <button mat-menu-item routerLink="/task9" routerLinkActive="active">Task 9</button>
+    </mat-menu>   
+    <button mat-button [matMenuTriggerFor]="login">Login</button>
+    <mat-menu #login="matMenu">
+      <button mat-menu-item routerLink="/api/login" routerLinkActive="active">Login In</button>
+      <button mat-menu-item routerLink="/api/registration" routerLinkActive="active">Registration</button>
+    </mat-menu>
+</section>

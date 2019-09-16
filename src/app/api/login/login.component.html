@@ -1,0 +1,51 @@
+
+<section>
+        <!-- <form [formGroup]="myForm" action="./registration.php"
+        (ngSubmit)="registerUser(myForm.value)" novalidate>
+        <div class="form-group" [ngClass]="{'has-error':!myForm.controls['phone'].valid}">
+            
+            <input  matInput type="phone" formControlName="phone" placeholder="Enter Phone" 
+            class="form-control" >
+            <p class="alert alert-danger" *ngIf="myForm.controls['phone'].hasError('minlength')">
+                Your phone must be at least 5 characters long.
+            </p>
+            <p class="alert alert-danger" *ngIf="myForm.controls['phone'].hasError('maxlength')">
+                Your phone cannot exceed 12 characters.
+            </p>
+            <p class="alert alert-danger" *ngIf="myForm.controls['phone'].hasError('required') && myForm.controls['phone'].dirty">
+                phone is required
+            </p>
+        </div>
+        <mat-form-field>
+            <input matInput placeholder="Enter your email" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        
+
+        <mat-form-field>
+          <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'"  required formControlName="password">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Enter Your User Name" required formControlName="username">
+        </mat-form-field>
+        <div class="form-group text-center">
+            <button mat-button type="submit" (click)="users()" class="btn btn-primary" [disabled]="!myForm.valid && email.invalid" >Submit</button>
+        </div>
+    </form> -->
+    <form [formGroup]="formControl" (ngSubmit)="registerUser(myForm.value)">
+    <mat-form-field>
+        <input matInput formControlName="accaunt" placeholder="Enter Phone Or Email" class="form-control" >
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" formControlName="password">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>
+    <button type="submit" mat-button class="btn btn-primary" [disabled]="formControl.invalid">GO</button>
+    </form>
+</section>

@@ -1,27 +1,15 @@
-# EnKataTask
+Задание 2. Модуль api.module.ts сделан с использованием lazy loading. (загрузга файлоф .js происходит только после открытя Login in или registration);
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0.
+Задание 3. Выполнена одновременная валидация на телефон (формат 12- чисел !БЕЗ знака +) и адрес электронной почты, и асинхронная валидация на наличие пользователей в БД.(login.component.ts)
 
-## Development server
+Задание 4. Выполнена с помощью синхронной валидации. Та же одновременная валидация одного инпута на 2 паттерна, как и в задании №3.(registration.component.ts)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Задание 5. Отдельный компонент хедер содержит сслыки на все задачи, одновременно выполняя условие задания №8.(header.component.ts)
 
-## Code scaffolding
+Задание 6. Реализованы системы филтров Data Table. На каждую ячейку таблицы реализованы собственнык пайпы (search.pipe.ts - search4.pipe.ts).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Задание 7. Реализованы роуты, включая переходы по дочерним компонентам(example.component.ts->params.component.ts) и Button-togle для дочерних(page-one.component.ts  --  page-three.component.ts)
 
-## Build
+Задание 9. Создан главный компонент (task9.component.ts) и реализованы методы @input & @Output связи инпутов дочерних компонентов (value1.component.ts  --  value3.component.ts) c изменением родителских данных.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+P.S. Спасибо за потраченное Вами время, проверяя данный таск...

@@ -1,0 +1,41 @@
+<section >
+    <table>
+        <tr><th>Категория</th><th>Фирма</th><th>Модель</th><th>Сезон</th></tr>
+        <tr *ngFor="let footwear of footwears | b:srchFirm | a:srchCategory | c:srchModel | d:srchSeason"><td>{{footwear.category}}</td><td>{{footwear.firm}}</td><td>{{footwear.model}}</td><td>{{footwear.season}}</td></tr>
+    </table>
+</section>
+<div>
+    <mat-form-field>
+        <mat-select placeholder="Category" [(ngModel)]="srchCategory">
+            <mat-option value="">Null</mat-option>
+            <mat-option value="Sneakers">Sneakers</mat-option>
+            <mat-option value="Shoes">Shoes</mat-option>
+            <mat-option value="Boots">Boots</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="Firm"  [(ngModel)]="srchFirm">
+            <mat-option value="">Null</mat-option>
+            <mat-option value="Nike">Nike</mat-option>
+            <mat-option value="Adidas">Adidas</mat-option>
+            <mat-option value="Roberto Botticelli">Roberto Botticelli</mat-option>
+            <mat-option value="Emporio Armani">Emporio Armani</mat-option>
+            <mat-option value="Trussardi Jeans">Trussardi Jeans</mat-option>
+        </mat-select>
+    </mat-form-field> 
+    <mat-form-field>       
+        <mat-select placeholder="Model"  [(ngModel)]="srchModel">
+            <mat-option value="">Null</mat-option>
+            <mat-option value="MENS AIR MONARCH IV">MENS AIR MONARCH IV</mat-option>
+            <mat-option value="Pro Vision">Pro Vision</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="Season"  [(ngModel)]="srchSeason">
+            <mat-option value="">Null</mat-option>
+            <mat-option value="Demiseason">Demiseason</mat-option>
+            <mat-option value="Summer">Summer</mat-option>
+            <mat-option value="Winter">Winter</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
